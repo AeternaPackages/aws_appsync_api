@@ -1,9 +1,4 @@
 # --- aws_appsync_api ---
-output "appsync_apis_id" {
-  description = "Map of id values across all appsync_apis, keyed the same as var.appsync_apis"
-  value       = module.appsync_apis.appsync_apis_id
-}
-
 output "appsync_apis_api_arn" {
   description = "Map of api_arn values across all appsync_apis, keyed the same as var.appsync_apis"
   value       = module.appsync_apis.appsync_apis_api_arn
@@ -138,11 +133,6 @@ output "appsync_api_keys_region" {
 }
 
 # --- aws_appsync_channel_namespace ---
-output "appsync_channel_namespaces_id" {
-  description = "Map of id values across all appsync_channel_namespaces, keyed the same as var.appsync_channel_namespaces"
-  value       = module.appsync_channel_namespaces.appsync_channel_namespaces_id
-}
-
 output "appsync_channel_namespaces_api_id" {
   description = "Map of api_id values across all appsync_channel_namespaces, keyed the same as var.appsync_channel_namespaces"
   value       = module.appsync_channel_namespaces.appsync_channel_namespaces_api_id
