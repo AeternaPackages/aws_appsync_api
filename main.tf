@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.appsync_apis : {
       for k2, v2 in coalesce(v1.appsync_api_caches, {}) :
       "${k1}/${k2}" => merge(v2, {
-        api_id = module.appsync_apis.appsync_apis_id["${k1}"]
+        api_id = module.appsync_apis.appsync_apis_api_id["${k1}"]
       })
     }
   ]...)
@@ -14,7 +14,7 @@ locals {
     for k1, v1 in var.appsync_apis : {
       for k2, v2 in coalesce(v1.appsync_api_keys, {}) :
       "${k1}/${k2}" => merge(v2, {
-        api_id = module.appsync_apis.appsync_apis_id["${k1}"]
+        api_id = module.appsync_apis.appsync_apis_api_id["${k1}"]
       })
     }
   ]...)
@@ -23,7 +23,7 @@ locals {
     for k1, v1 in var.appsync_apis : {
       for k2, v2 in coalesce(v1.appsync_channel_namespaces, {}) :
       "${k1}/${k2}" => merge(v2, {
-        api_id = module.appsync_apis.appsync_apis_id["${k1}"]
+        api_id = module.appsync_apis.appsync_apis_api_id["${k1}"]
       })
     }
   ]...)
@@ -32,7 +32,7 @@ locals {
     for k1, v1 in var.appsync_apis : {
       for k2, v2 in coalesce(v1.appsync_datasources, {}) :
       "${k1}/${k2}" => merge(v2, {
-        api_id = module.appsync_apis.appsync_apis_id["${k1}"]
+        api_id = module.appsync_apis.appsync_apis_api_id["${k1}"]
       })
     }
   ]...)
@@ -41,7 +41,7 @@ locals {
     for k1, v1 in var.appsync_apis : {
       for k2, v2 in coalesce(v1.appsync_domain_name_api_associations, {}) :
       "${k1}/${k2}" => merge(v2, {
-        api_id = module.appsync_apis.appsync_apis_id["${k1}"]
+        api_id = module.appsync_apis.appsync_apis_api_id["${k1}"]
       })
     }
   ]...)
@@ -50,7 +50,7 @@ locals {
     for k1, v1 in var.appsync_apis : {
       for k2, v2 in coalesce(v1.appsync_functions, {}) :
       "${k1}/${k2}" => merge(v2, {
-        api_id = module.appsync_apis.appsync_apis_id["${k1}"]
+        api_id = module.appsync_apis.appsync_apis_api_id["${k1}"]
       })
     }
   ]...)
@@ -59,7 +59,7 @@ locals {
     for k1, v1 in var.appsync_apis : {
       for k2, v2 in coalesce(v1.appsync_resolvers, {}) :
       "${k1}/${k2}" => merge(v2, {
-        api_id = module.appsync_apis.appsync_apis_id["${k1}"]
+        api_id = module.appsync_apis.appsync_apis_api_id["${k1}"]
       })
     }
   ]...)
@@ -68,7 +68,7 @@ locals {
     for k1, v1 in var.appsync_apis : {
       for k2, v2 in coalesce(v1.appsync_types, {}) :
       "${k1}/${k2}" => merge(v2, {
-        api_id = module.appsync_apis.appsync_apis_id["${k1}"]
+        api_id = module.appsync_apis.appsync_apis_api_id["${k1}"]
       })
     }
   ]...)
